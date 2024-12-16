@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://vixit2016:5Q4cXNGyEWSlmPN9@cluster0.roggs.mongodb.net/Localevents', {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
