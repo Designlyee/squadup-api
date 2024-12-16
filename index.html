@@ -2,14 +2,17 @@
 <html lang="en">
 
 <head>
+    <!-- Metadata and links to external resources for fonts, stylesheets, and preconnection optimizations -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SquadUp!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts imported from Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Lexend:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -17,8 +20,10 @@
     <div class="container">
         <section class="hero">
             <header>
+                <!-- Logo linking to the homepage -->
                 <a href="./index.html"><img src="./images/logo.png" alt="SquadUp Logo" class="logo"></a>
                 <div class="nav">
+                    <!-- Navigation menu linking to different sections of the page -->
                     <nav>
                         <a href="#about">About us</a>
                         <a href="#local">Local Events</a>
@@ -26,22 +31,26 @@
                         <a href="#friends">Find Friends</a>
                         <a href="#career">Career</a>
                     </nav>
+                    <!-- Call-to-action button -->
                     <a href="#register" class="register-btn">Find an Event</a>
                 </div>
             </header>
             <div class="hero-content">
                 <div>
+                    <!-- Main heading and description -->
                     <h1>SquadUp!</h1>
                     <p>SquadUp! is the event platform for Canadian newcomers, helping individuals and organizations
                         create and manage both local and online events effortlessly. Designed to help new immigrants
                         find friends and build networks.</p>
+                    <!-- Button to start creating a new event -->
                     <a href="edit.html" class="start-btn">Start a New Event</a>
                 </div>
+                <!-- Illustration image -->
                 <img src="./images/banner.png" alt="Megaphone Illustration" style="width: 400px;">
             </div>
-
         </section>
 
+        <!-- Section showcasing local events -->
         <section class="local-events">
             <div class="section-header">
                 <h2 class="section-title">LOCAL EVENT</h2>
@@ -50,16 +59,19 @@
                     community!</p>
             </div>
 
+            <!-- Dynamic content will populate this grid -->
             <div class="events-grid">
                 <!-- Events will be dynamically loaded here -->
             </div>
         </section>
 
+        <!-- Contact section -->
         <section class="contact-section">
             <h2 class="contact-title">Contact Us</h2>
             <div class="contact">
                 <div class="contact-form">
                     <form>
+                        <!-- Radio buttons for different contact purposes -->
                         <div class="form-options" style="margin-bottom: 20px;">
                             <label style="margin-right: 20px;">
                                 <input type="radio" name="contact-type" checked> Questions about SquadUp!
@@ -69,6 +81,7 @@
                             </label>
                         </div>
 
+                        <!-- Input fields for user information and message -->
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" placeholder="Name">
@@ -84,20 +97,25 @@
                             <textarea placeholder="Message"></textarea>
                         </div>
 
+                        <!-- Submit button -->
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
+                <!-- Illustration image for the contact section -->
                 <div class="contact-image"><img src="./images/illustration.png" alt=""></div>
             </div>
         </section>
     </div>
 </body>
+
 <script>
+    // Function to dynamically load event data and display it
     async function loadEvents() {
         try {
             const response = await fetch('http://localhost:8000/api/events');
             const events = await response.json();
 
+            // Coordinates for city-based weather info
             const cityCoordinates = {
                 'Toronto': { lat: 43, lon: -79 },
                 'Calgary': { lat: 51, lon: -114 },
@@ -111,11 +129,9 @@
             eventsGrid.innerHTML = ''; // Clear existing events
 
             events.forEach(async event => {
-
-                // Get coordinates for the event location
+                // Extracting weather data if location coordinates are available
                 const city = event.location.split(',')[0].trim();
                 const coords = cityCoordinates[city];
-
                 let weatherData = { temp: 'N/A', description: 'N/A' };
 
                 if (coords) {
@@ -129,7 +145,7 @@
                     };
                 }
 
-
+                // Dynamically append event card HTML
                 eventsGrid.innerHTML += `
                 <div class="event-card" onclick="window.location.href='edit.html?id=${event._id}'">
                     <div class="event-tag" style="background-color: ${event.color.primary};">${event.name}</div>
@@ -148,11 +164,10 @@
                         <div class="event-image">
                             <img src="http://localhost:8000${event.eventPhoto}" alt="Event Image" style="width: 100%;height: 89%;">
                             <div class="weather">
-                                <div  class="weather-div">
+                                <div class="weather-div">
                                     <div class="weather-temp">${weatherData.temp}<span style="font-size: 12px">°C</span></div>
                                     <div class="weather-desc">${weatherData.description}</div>  
-                               </div>
-                                  
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -164,12 +179,14 @@
         }
     }
 
+    // Load events on page load
     document.addEventListener('DOMContentLoaded', loadEvents);
 
+    // Handle form submission in the contact section
     document.querySelector('.contact-form form').addEventListener('submit', function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default form submission
         alert('Message sent successfully!');
-        this.reset();
+        this.reset(); // Reset the form fields
     });
 </script>
 
