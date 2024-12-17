@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Event - SquadUp!</title>
+    <link rel="icon" href="012.png"> //new icon~~~
     <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -23,6 +24,7 @@
                     </nav>
                     <a href="#register" class="register-btn">Register an Event</a>
                 </div>
+
             </header>
             <div class="hero-content">
                 <div>
@@ -39,22 +41,30 @@
         <section class="local-events">
             <div class="section-header">
                 <h2 class="section-title">Edit/Add Your Event</h2>
-                <p class="section-subtitle">Step-by-Step Guide to prompt your event!</p>
+                <p class="section-subtitle">Step-by-Step Guide to prompt your event!
+                </p>
             </div>
 
             <div class="section-form">
                 <div style="display: flex; justify-content: flex-end;">
-                    <!-- Delete Event Button -->
-                    <button id="deleteBtn" class="delete-btn">
-                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
-                            <!-- SVG code for button icon -->
+                    <button id="deleteBtn" class="delete-btn"><svg width="27" height="27" viewBox="0 0 27 27"
+                            fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect x="0.115234" y="0.525391" width="25.9487" height="25.9487"
+                                fill="url(#pattern0_945_4327)" />
+                            <defs>
+                                <pattern id="pattern0_945_4327" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image0_945_4327" transform="scale(0.01)" />
+                                </pattern>
+                                <image id="image0_945_4327" width="100" height="100"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
                         </svg>
-                        Delete Event
-                    </button>
+                        Delete
+                        Event</button>
                 </div>
 
                 <form>
-                    <!-- Event color selection section -->
                     <div class="form-section color-section">
                         <div class="form-header">
                             <div class="form-number">01</div>
@@ -67,30 +77,46 @@
                             <input type="color" id="secondary-color" class="color-option" value="#98ff98">
                         </div>
                     </div>
-
-                    <!-- Event name and photo upload sections -->
                     <div style="display: flex; justify-content: space-between; gap: 20px;">
                         <div class="form-section name-section" style="width: 50%;">
                             <div class="form-header">
                                 <div class="form-number">02</div>
-                                <div class="form-title">Event Name <span class="char-limit">Less than 6 words</span></div>
+                                <div class="form-title">Event Name <span class="char-limit">Less than 6
+                                        words</span></div>
                             </div>
                             <input type="text" id="eventName" class="form-input" placeholder="Enter event name">
                         </div>
 
-                        <!-- Event photo upload -->
                         <div class="form-section upload-section" style="width: 50%; text-align: center;">
+                            <!-- 预览区域 -->
                             <div id="imagePreview" style="display: none;">
                                 <div class="preview-container">
-                                    <button type="button" class="delete-image-btn" onclick="deleteImage()">Delete</button>
-                                    <img id="previewImg" style="max-width: 200px; max-height: 200px; object-fit: cover;">
+                                    <button type="button" class="delete-image-btn" onclick="deleteImage()">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 1L1 13" stroke="#666" stroke-width="2"
+                                                stroke-linecap="round" />
+                                            <path d="M1 1L13 13" stroke="#666" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+                                    <img id="previewImg"
+                                        style="max-width: 200px; max-height: 200px; object-fit: cover;">
                                 </div>
                             </div>
+                            <!-- 上传区域 -->
                             <div id="uploadArea">
                                 <div class="upload-icon">
-                                    <svg width="75" height="76" viewBox="0 0 75 76" fill="none">
-                                        <!-- SVG code for upload icon -->
+                                    <svg width="75" height="76" viewBox="0 0 75 76" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M37.9121 34.5105C37.858 34.4404 37.7889 34.3838 37.71 34.3448C37.6312 34.3059 37.5446 34.2856 37.4568 34.2856C37.3691 34.2856 37.2825 34.3059 37.2036 34.3448C37.1247 34.3838 37.0556 34.4404 37.0016 34.5105L28.9078 44.8889C28.8411 44.9752 28.7997 45.0789 28.7883 45.188C28.777 45.297 28.7962 45.4072 28.8437 45.5057C28.8911 45.6043 28.965 45.6873 29.0569 45.7453C29.1487 45.8033 29.2549 45.8339 29.3631 45.8337H34.7035V63.5876C34.7035 63.9099 34.9637 64.1735 35.2816 64.1735H39.6176C39.9355 64.1735 40.1957 63.9099 40.1957 63.5876V45.841H45.5506C46.0347 45.841 46.3021 45.2771 46.0058 44.8962L37.9121 34.5105Z"
+                                            fill="black" />
+                                        <path
+                                            d="M59.0934 27.75C55.7836 18.9023 47.3502 12.6108 37.4715 12.6108C27.5928 12.6108 19.1594 18.895 15.8496 27.7427C9.65645 29.3906 5.08203 35.1108 5.08203 41.9077C5.08203 50.001 11.5498 56.5562 19.5279 56.5562H22.4258C22.7437 56.5562 23.0039 56.2925 23.0039 55.9702V51.5757C23.0039 51.2534 22.7437 50.9897 22.4258 50.9897H19.5279C17.0926 50.9897 14.8018 50.0083 13.0963 48.2285C11.398 46.4561 10.4947 44.0684 10.5742 41.5928C10.6393 39.6592 11.2896 37.8428 12.4676 36.312C13.6744 34.752 15.3654 33.6167 17.2443 33.1113L19.9832 32.3862L20.9877 29.7056C21.6092 28.0356 22.4764 26.4756 23.5676 25.062C24.6449 23.6609 25.9209 22.4293 27.3543 21.4072C30.3244 19.2905 33.8221 18.1699 37.4715 18.1699C41.1209 18.1699 44.6186 19.2905 47.5887 21.4072C49.0268 22.4326 50.2986 23.6631 51.3754 25.062C52.4666 26.4756 53.3338 28.043 53.9553 29.7056L54.9525 32.3789L57.6842 33.1113C61.601 34.1807 64.3398 37.7915 64.3398 41.9077C64.3398 44.332 63.4076 46.6172 61.7166 48.3311C60.8873 49.1765 59.9008 49.8468 58.8142 50.3031C57.7275 50.7595 56.5624 50.9929 55.3861 50.9897H52.4883C52.1703 50.9897 51.9102 51.2534 51.9102 51.5757V55.9702C51.9102 56.2925 52.1703 56.5562 52.4883 56.5562H55.3861C63.3643 56.5562 69.832 50.001 69.832 41.9077C69.832 35.1182 65.2721 29.4053 59.0934 27.75Z"
+                                            fill="black" />
                                     </svg>
+
                                 </div>
                                 <div class="upload-text">Drag and Upload Event Photo here <br>or</div>
                                 <input type="file" id="eventPhoto" accept="image/*" style="display: none;">
@@ -100,17 +126,17 @@
                         </div>
                     </div>
 
-                    <!-- Event description section -->
+
                     <div class="form-section description-section">
                         <div class="form-header">
                             <div class="form-number">03</div>
-                            <div class="form-title">Event Description <span class="char-limit">Less than 150 words</span>
-                            </div>
+                            <div class="form-title">Event Description <span class="char-limit">Less than 150
+                                    words</span></div>
                         </div>
                         <input type="text" id="eventDescription" class="form-input" placeholder="Describe your event">
+
                     </div>
 
-                    <!-- Event date and cost sections -->
                     <div style="display: flex; justify-content: space-between; gap: 20px;">
                         <div class="form-section date-section" style="width: 50%;">
                             <div class="form-header">
@@ -119,18 +145,37 @@
                             </div>
                             <input type="date" id="eventDate" class="form-input" placeholder="Select date">
                         </div>
+
                         <div class="form-section price-section" style="width: 50%; display: flex; gap: 10px;">
+                            <div><svg width="135" height="135" viewBox="0 0 135 135" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect x="0.556641" y="0.402344" width="133.652" height="133.652"
+                                        fill="url(#pattern0_951_4391)" />
+                                    <defs>
+                                        <pattern id="pattern0_951_4391" patternContentUnits="objectBoundingBox"
+                                            width="1" height="1">
+                                            <use xlink:href="#image0_951_4391" transform="scale(0.01)" />
+                                        </pattern>
+                                        <image id="image0_951_4391" width="100" height="100"
+                                            xlink:href="data:image/png;base64,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" />
+                                    </defs>
+                                </svg>
+                            </div>
                             <div>
                                 <div class="form-header">
                                     <div class="form-title">How much does it cost?</div>
                                 </div>
-                                <input type="text" id="eventCost" class="form-input"
-                                    placeholder="Enter cost">
+                                <input type="text" id="eventCost" class="form-input" style="
+                                background: rgba(255, 255, 255, 0.67);
+                                padding-left: 20px;
+                                margin-top: 21px;
+                            " placeholder="Enter cost">
                             </div>
+
                         </div>
                     </div>
 
-                    <!-- Family-friendly toggle section -->
+
                     <div class="form-section family-section">
                         <div class="form-header">
                             <div class="form-number">05</div>
@@ -147,7 +192,6 @@
                         </div>
                     </div>
 
-                    <!-- Contact information section -->
                     <div class="form-section contact-section">
                         <div class="form-header">
                             <div class="form-number">06</div>
@@ -156,26 +200,40 @@
                         <input type="text" id="eventContact" class="form-input" placeholder="Enter contact details">
                     </div>
 
-                    <!-- Event location options -->
                     <div class="form-section location-section">
                         <div class="form-header">
                             <div class="form-number">07</div>
                             <div class="form-title">Event Location</div>
                         </div>
                         <div class="location-options">
-                            <label class="location-option">
-                                <input type="radio" name="eventLocation" value="Toronto, Ontario">
-                                <span class="location-text">Toronto, Ontario</span>
-                            </label>
-                            <label class="location-option">
-                                <input type="radio" name="eventLocation" value="Calgary, Alberta">
-                                <span class="location-text">Calgary, Alberta</span>
-                            </label>
-                            <label class="location-option">
-                                <input type="radio" name="eventLocation" value="Montreal, Quebec">
-                                <span class="location-text">Montreal, Quebec</span>
-                            </label>
-                            <!-- Additional locations -->
+                            <div class="location-row">
+                                <label class="location-option">
+                                    <input type="radio" name="eventLocation" value="Toronto, Ontario">
+                                    <span class="location-text">Toronto, Ontario</span>
+                                </label>
+                                <label class="location-option">
+                                    <input type="radio" name="eventLocation" value="Calgary, Alberta">
+                                    <span class="location-text">Calgary, Alberta</span>
+                                </label>
+                                <label class="location-option">
+                                    <input type="radio" name="eventLocation" value="Montreal, Quebec">
+                                    <span class="location-text">Montreal, Quebec</span>
+                                </label>
+                            </div>
+                            <div class="location-row">
+                                <label class="location-option">
+                                    <input type="radio" name="eventLocation" value="Ottawa, Ontario">
+                                    <span class="location-text">Ottawa, Ontario</span>
+                                </label>
+                                <label class="location-option">
+                                    <input type="radio" name="eventLocation" value="Vancouver, BC">
+                                    <span class="location-text">Vancouver, BC</span>
+                                </label>
+                                <label class="location-option">
+                                    <input type="radio" name="eventLocation" value="Winnipeg, Manitoba">
+                                    <span class="location-text">Winnipeg, Manitoba</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
 
@@ -189,19 +247,30 @@
             <div class="contact">
                 <div class="contact-form">
                     <form>
-                        <!-- Contact form for inquiries -->
+                        <div class="form-options" style="margin-bottom: 20px;">
+                            <label style="margin-right: 20px;">
+                                <input type="radio" name="contact-type" checked> Questions about SquadUp!
+                            </label>
+                            <label>
+                                <input type="radio" name="contact-type"> Join the team
+                            </label>
+                        </div>
+
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" placeholder="Name">
                         </div>
+
                         <div class="form-group">
                             <label>Email*</label>
                             <input type="email" placeholder="Email">
                         </div>
+
                         <div class="form-group">
                             <label>Message*</label>
                             <textarea placeholder="Message"></textarea>
                         </div>
+
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
@@ -209,12 +278,12 @@
             </div>
         </section>
     </div>
+    </div>
 </body>
-
 <script>
     let currentEventId = null;
 
-    // Load event data into the form if an event ID exists
+    // Load event card
     async function loadEvent() {
         const urlParams = new URLSearchParams(window.location.search);
         const eventId = urlParams.get('id');
@@ -227,25 +296,17 @@
                 const response = await fetch(`http://localhost:8000/api/events/${eventId}`);
                 const event = await response.json();
 
-                // Populate form fields
+               // Set form fields using data from 'event' object
                 document.getElementById('eventName').value = event.name;
                 document.getElementById('eventDescription').value = event.description;
                 document.getElementById('eventDate').value = event.date;
-
-                const locationRadios = document.getElementsByName('eventLocation');
-                locationRadios.forEach(radio => {
-                    if (radio.value === event.location) {
-                        radio.checked = true;
-                    }
-                });
-
+                document.getElementById('eventLocation').value = event.location;
                 document.getElementById('eventContact').value = event.contactInfo;
                 document.getElementById('familyFriendly').checked = event.familyFriendly;
-                document.getElementById('primary-color').value = event.color.primary;
-                document.getElementById('secondary-color').value = event.color.secondary;
-                document.getElementById('eventCost').value = event.eventCost;
-
-                // Display uploaded image preview
+                document.getElementById('primary-color').value = event.color.primary; //primary colour
+                document.getElementById('secondary-color').value = event.color.secondary; //secondary colour
+                document.getElementById('eventCost').value = event.eventCost; //set event cost
+   // Display uploaded event image, if available
                 if (event.eventPhoto) {
                     document.getElementById('previewImg').src = `http://localhost:8000${event.eventPhoto}`;
                     document.getElementById('imagePreview').style.display = 'block';
@@ -258,10 +319,11 @@
         }
     }
 
-    // File upload preview
+// File upload preview?
     document.getElementById('eventPhoto').addEventListener('change', async function (e) {
         const file = e.target.files[0];
         if (file) {
+           // Show image preview before upload
             const reader = new FileReader();
             reader.onload = function (e) {
                 document.getElementById('previewImg').src = e.target.result;
@@ -270,6 +332,7 @@
             }
             reader.readAsDataURL(file);
 
+            // Upload file 
             const formData = new FormData();
             formData.append('file', file);
 
@@ -278,6 +341,7 @@
                     method: 'POST',
                     body: formData
                 });
+                // Get server response as JSON
                 const data = await response.json();
                 document.getElementById('eventPhoto').dataset.filepath = data.filePath;
             } catch (error) {
@@ -286,34 +350,39 @@
         }
     });
 
-    // Delete uploaded image
+  // Function to delete the uploaded image
     function deleteImage() {
+        // Clear image preview
         document.getElementById('previewImg').src = '';
         document.getElementById('imagePreview').style.display = 'none';
+       // Show upload input area
         document.getElementById('uploadArea').style.display = 'block';
+       // Clear file input
         document.getElementById('eventPhoto').value = '';
+      // Remove stored file path
         document.getElementById('eventPhoto').dataset.filepath = '';
     }
 
-    // Form submission handling
+// Handle form submission
     document.querySelector('form').addEventListener('submit', async (e) => {
         e.preventDefault();
+           // Gather form data into an object
 
         const eventData = {
             name: document.getElementById('eventName').value,
             description: document.getElementById('eventDescription').value,
             date: document.getElementById('eventDate').value,
-            location: document.querySelector('input[name="eventLocation"]:checked').value,
+            location: document.getElementById('eventLocation').value,
             contactInfo: document.getElementById('eventContact').value,
             familyFriendly: document.getElementById('familyFriendly').checked,
             color: {
                 primary: document.getElementById('primary-color').value,
                 secondary: document.getElementById('secondary-color').value
             },
-            eventPhoto: document.getElementById('eventPhoto').dataset.filepath || '',
+            eventPhoto: document.getElementById('eventPhoto').dataset.filepath || '', // 使用上传后的文件路径
             eventCost: document.getElementById('eventCost').value
         };
-
+ // Determine if it's a new event (POST) or an update (PUT)
         const url = currentEventId
             ? `http://localhost:8000/api/events/${currentEventId}`
             : 'http://localhost:8000/api/events';
@@ -337,32 +406,31 @@
         }
     });
 
-    // Delete event handling
+    // Handle delete event...
     document.getElementById('deleteBtn').addEventListener('click', async () => {
         if (currentEventId && confirm('Are you sure you want to delete this event?')) {
             try {
                 const response = await fetch(`http://localhost:8000/api/events/${currentEventId}`, {
-                    method: 'DELETE'
+                    method: 'DELETE' // Use DELETE method
                 });
 
                 if (response.ok) {
                     window.location.href = 'index.html';
                 }
             } catch (error) {
-                console.error('Error:', error);
+                console.error('Error:', error);// Log any errors
             }
         }
     });
-
-    // Load event on page load
+// Load existing event data when the page is loaded
     document.addEventListener('DOMContentLoaded', loadEvent);
-
-    // Contact form submission
+ // Simple form submission for a contact form with confirmation message.
     document.querySelector('.contact-form form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Message sent successfully!');
-        this.reset();
+        e.preventDefault(); // Prevent default form submission
+        alert('Message sent successfully!'); // Show success message
+        this.reset(); // Clear form fields
     });
+
 </script>
 
 </html>
